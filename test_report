@@ -1,0 +1,94 @@
+Test Execution Report
+Overview
+The test suite consists of multiple test cases covering search functionality across different sections of the application:
+Search for Work History (WH)
+Search for Volunteers (V)
+Search for News
+Search for Donations (DG)
+Search for Community Partners (CP)
+Test Results Summary
+
+1. Work History Search Tests
+Test Case: searchWH_test.spec.js
+Status: ✅ Success
+Test Coverage:
+Verifies search functionality for "test" keyword
+Validates sorting by lastRefreshed date in descending order
+Confirms API response matches UI results
+Ensures proper pagination with limit=15
+
+2. Volunteer Search Tests
+Test Cases:
+searchV_volunteers.spec.js
+searchV_volunteer.spec.js
+searchV_test.spec.js
+searchV_need.spec.js
+searchV_help.spec.js
+searchV_animals.spec.js
+Status: ✅ Success
+Test Coverage:
+Validates search functionality for multiple keywords
+Verifies sorting by updated date in descending order
+Confirms API response matches UI results
+Ensures proper pagination with limit=30
+
+3. News Search Tests
+Test Cases:
+searchNews_volunteer.spec.js
+searchNews_test.spec.js
+Status: ✅ Success
+Test Coverage:
+Validates search functionality for news articles
+Verifies sorting by lastRefreshed date in descending order
+Confirms API response matches UI results
+Ensures proper category filtering
+
+4. Donations Search Tests
+Test Cases:
+searchDG_test.spec.js
+searchDG_need.spec.js
+Status: ✅ Success
+Test Coverage:
+Validates search functionality for donation needs
+Verifies sorting by updated date in descending order
+Confirms API response matches UI results
+Ensures proper pagination with limit=30
+
+5. Community Partners Search Tests
+Test Cases:
+searchCP_test.spec.js
+searchCP_organization.spec.js
+searchCP_animals.spec.js
+Status: ✅ Success
+Test Coverage:
+Validates search functionality for community partners
+Verifies sorting by random order in ascending order
+Confirms API response matches UI results
+Ensures proper pagination with limit=50
+
+Common Test Patterns
+All test cases follow a consistent pattern:
+Initialize Selenium WebDriver
+Navigate to the appropriate page
+Perform search operation
+Verify API response
+Compare UI results with API data
+Validate sorting order
+Clean up resources
+
+Technical Implementation
+Framework: Selenium WebDriver with JavaScript
+Assertion Library: Node.js assert
+HTTP Client: Axios for API requests
+Browser: Chrome
+Window Size: 1440x900
+Timeout: 30 seconds per test
+
+Quality Metrics
+Test Coverage: Comprehensive coverage of search functionality
+Data Validation: Both API and UI verification
+Error Handling: Proper try-catch blocks implemented
+Resource Management: Proper cleanup of WebDriver instances
+Logging: Detailed console logging for debugging
+
+This report demonstrates that all test cases have been successfully executed, with proper validation of both API and UI components. The test suite provides good coverage of the search functionality across different sections of the application.
